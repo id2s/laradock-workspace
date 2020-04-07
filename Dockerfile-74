@@ -4,7 +4,7 @@
 #--------------------------------------------------------------------------
 #
 
-FROM phusion/baseimage:0.11
+FROM phusion/baseimage:latest
 
 LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 
@@ -17,7 +17,7 @@ ENV LC_CTYPE=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV TERM xterm
 
-# Add the "PHP 5" ppa
+# Add the "PHP 7" ppa
 RUN apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:ondrej/php
 
@@ -34,24 +34,22 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y --allow-downgrades --allow-remove-essential \
         --allow-change-held-packages \
-        bash-completion \
-        php5.6-cli \
-        php5.6-common \
-        php5.6-curl \
-        php5.6-intl \
-        php5.6-json \
-        php5.6-xml \
-        php5.6-mbstring \
-        php5.6-mcrypt \
-        php5.6-mysql \
-        php5.6-pgsql \
-        php5.6-sqlite \
-        php5.6-sqlite3 \
-        php5.6-zip \
-        php5.6-bcmath \
-        php5.6-memcached \
-        php5.6-gd \
-        php5.6-dev \
+        php7.4-cli \
+        php7.4-common \
+        php7.4-curl \
+        php7.4-intl \
+        php7.4-json \
+        php7.4-xml \
+        php7.4-mbstring \
+        php7.4-mysql \
+        php7.4-pgsql \
+        php7.4-sqlite \
+        php7.4-sqlite3 \
+        php7.4-zip \
+        php7.4-bcmath \
+        php7.4-memcached \
+        php7.4-gd \
+        php7.4-dev \
         pkg-config \
         libcurl4-openssl-dev \
         libedit-dev \
